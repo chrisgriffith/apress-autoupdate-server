@@ -35,7 +35,7 @@ let getBaseUrl = () => {
   if (process.env.NODE_ENV === 'development') {
     return 'http://localhost:3000';
   } else {
-    return 'http://configap.com'
+    return 'http://aj-software.com'
   }
 }
 
