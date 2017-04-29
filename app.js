@@ -15,7 +15,11 @@ app.get('/updates/latest', function (req, res) {
         let updateURL = baseURL + '/releases/darwin/' + latest + '/electron.zip';
 
         res.json({
-            url: updateURL
+            url: updateURL,
+            name: "My Release Name",
+            notes: "These are some release notes",
+            pub_date: "2017-04-18T12:29:53+01:00"
+
         });
     }
 });
@@ -32,13 +36,13 @@ let getLatestRelease = () => {
 }
 
 let getBaseUrl = () => {
-  if (process.env.NODE_ENV === 'development') {
-    return 'http://localhost:3000';
-  } else {
-    return 'http://aj-software.com'
-  }
+    if (process.env.NODE_ENV === 'development') {
+        return 'http://localhost:3000';
+    } else {
+        return 'http://aj-software.com'
+    }
 }
 
 app.listen(process.env.PORT, () => {
-  console.log(`Express server listening on port ${process.env.PORT}`);
+    console.log(`Express server listening on port ${process.env.PORT}`);
 });
