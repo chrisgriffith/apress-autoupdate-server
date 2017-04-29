@@ -19,7 +19,6 @@ app.get('/updates/latest', function (req, res) {
             name: "My Release Name",
             notes: "These are some release notes",
             pub_date: "2017-04-18T12:29:53+01:00"
-
         });
     }
 });
